@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/Primary.Dark.Main</item>
+        <item name="colorPrimaryDark">@color/Primary.Dark.Sub</item>
+        <item name="colorAccent">@color/Accent</item>
+        <item name="android:textColor">@color/Text.Light</item>
+    </style>
+
+    <style name="ActionBarLogo" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="logo">@drawable/rr_logo</item>
+        <item name="displayOptions">useLogo</item>
+    </style>
+
+</resources>

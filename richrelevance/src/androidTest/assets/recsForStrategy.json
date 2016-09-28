@@ -1,0 +1,313 @@
+
+{
+  "strategyName": "SiteWideBestSellers",
+  "requestId": "",
+  "message": "Site-wide Best Sellers",
+  "recommendedProducts": [
+    {
+      "clickURL": "http://recs.richrelevance.com/rrserver/apiclick?a=showcaseparent&cak=615389034415e91d&ct=http%3A%2F%2Flabs.richrelevance.com%2Fstorre%2Fcatalog%2Fproduct%2Fview%2Fsku%2F24100292&vg=f3a16fcb-1193-460e-4a36-255366b5cf38&stid=13&pti=13&pa=4892&pos=0&p=24100292&channelId=615389034415e91d&s=13DF9FE0-20D2-4951-AF45-4DDB105E7406&u=RZTestUser",
+      "regionPriceDescription": "",
+      "rating": 4.238999843597412,
+      "numReviews": 0,
+      "priceRangeCents": [
+        2900,
+        2900
+      ],
+      "categoryIds": [
+        "Electronics",
+        "Electronics.Computers",
+        "Electronics.Computers.Printers, Scanners & Supplies",
+        "Electronics.Computers.Printers, Scanners & Supplies.Printers"
+      ],
+      "regionalProductSku": "24100292",
+      "imageURL": "http://labs.richrelevance.com/storre/media/catalog/product/c/a/canon-pixma-mg2220-all-in-one-inkjet-multifunction-printerscannercopier-a3c09644838bab3c901601a1603534b1.jpg",
+      "name": "Canon PIXMA MG2220 All-in-One Inkjet Multifunction Printer/Scanner/Copier",
+      "genre": "Electronics",
+      "isRecommendable": true,
+      "priceCents": 2900,
+      "attributes": {
+        "rr_imageURL": [
+          "http://labs.richrelevance.com/storre/media/catalog/product/c/a/canon-pixma-mg2220-all-in-one-inkjet-multifunction-printerscannercopier-a3c09644838bab3c901601a1603534b1.jpg"
+        ],
+        "ListPrice": [
+          "39"
+        ],
+        "MktplcInd": [
+          "W"
+        ],
+        "rr_imageOriginalURL": [
+          "http://labs.richrelevance.com/storre/media/catalog/product/c/a/canon-pixma-mg2220-all-in-one-inkjet-multifunction-printerscannercopier-a3c09644838bab3c901601a1603534b1.jpg"
+        ],
+        "rr_imageThumbURL": [
+          "http://labs.richrelevance.com/storre/media/catalog/product/c/a/canon-pixma-mg2220-all-in-one-inkjet-multifunction-printerscannercopier-19a0c9d47b737d6723fe3fdf174d498f.jpg"
+        ],
+        "AddToCart": [
+          "Y"
+        ],
+        "IsReducedPrice": [
+          "N"
+        ],
+        "Clearance": [
+          "N"
+        ],
+        "97CentShipping": [
+          "Y"
+        ],
+        "Rollback": [
+          "Y"
+        ],
+        "IsSubmap": [
+          "N"
+        ],
+        "S2S": [
+          "Y"
+        ],
+        "Online": [
+          "Y"
+        ]
+      },
+      "id": "24100292",
+      "categories": [
+        {
+          "hasChildren": false,
+          "name": "Electronics",
+          "id": "Electronics"
+        },
+        {
+          "hasChildren": false,
+          "name": "Computers",
+          "id": "Electronics.Computers"
+        },
+        {
+          "hasChildren": false,
+          "name": "Printers, Scanners & Supplies",
+          "id": "Electronics.Computers.Printers, Scanners & Supplies"
+        },
+        {
+          "hasChildren": false,
+          "name": "Printers",
+          "id": "Electronics.Computers.Printers, Scanners & Supplies.Printers"
+        }
+      ],
+      "brand": "Canon"
+    },
+    {
+      "clickURL": "http://recs.richrelevance.com/rrserver/apiclick?a=showcaseparent&cak=615389034415e91d&ct=http%3A%2F%2Flabs.richrelevance.com%2Fstorre%2Fcatalog%2Fproduct%2Fview%2Fsku%2F23954225&vg=76aaff05-fc40-4894-edb8-e3536eb328eb&stid=13&pti=11&pa=-1&pos=1&p=23954225&channelId=615389034415e91d&s=2B5F4188-2C10-4B94-9BB5-E881FE28E079&u=RZTestUser",
+      "regionPriceDescription": "",
+      "rating": 4.2729997634887695,
+      "numReviews": 0,
+      "priceRangeCents": [
+        900,
+        900
+      ],
+      "categoryIds": [
+        "Apparel",
+        "Apparel.Men",
+        "Apparel.Men.All Shirts"
+      ],
+      "regionalProductSku": "23954225",
+      "imageURL": "http://labs.richrelevance.com/storre/media/catalog/product/g/e/george-young-men039s-short-sleeve-polo-71d50b1dadf72047c8332d1ab006a763.jpg",
+      "name": "George Young Men's Short Sleeve Polo",
+      "genre": "Apparel",
+      "isRecommendable": true,
+      "priceCents": 900,
+      "id": "23954225",
+      "categories": [
+        {
+          "hasChildren": false,
+          "name": "Apparel",
+          "id": "Apparel"
+        },
+        {
+          "hasChildren": false,
+          "name": "Men",
+          "id": "Apparel.Men"
+        },
+        {
+          "hasChildren": false,
+          "name": "All Shirts",
+          "id": "Apparel.Men.All Shirts"
+        }
+      ],
+      "brand": "George"
+    },
+    {
+      "clickURL": "http://recs.richrelevance.com/rrserver/apiclick?a=showcaseparent&cak=615389034415e91d&ct=http%3A%2F%2Flabs.richrelevance.com%2Fstorre%2Fcatalog%2Fproduct%2Fview%2Fsku%2F21674345&vg=76aaff05-fc40-4894-edb8-e3536eb328eb&stid=13&pti=11&pa=-1&pos=2&p=21674345&channelId=615389034415e91d&s=2B5F4188-2C10-4B94-9BB5-E881FE28E079&u=RZTestUser",
+      "regionPriceDescription": "",
+      "rating": 4.800000190734863,
+      "numReviews": 0,
+      "priceRangeCents": [
+        397,
+        397
+      ],
+      "categoryIds": [
+        "Beauty",
+        "Health",
+        "Beauty.Bath & Body",
+        "Health.Personal Care",
+        "Beauty.Bath & Body.Body Cleansers",
+        "Health.Personal Care.Hand Soap & Sanitizers"
+      ],
+      "regionalProductSku": "21674345",
+      "imageURL": "http://labs.richrelevance.com/storre/media/catalog/product/g/e/germ-x-hand-sanitizer-30-fl-oz-ca032e107a26c24513b4e0ac4d82f544.jpg",
+      "name": "Germ-X Hand Sanitizer, 30 fl oz",
+      "genre": "Beauty",
+      "isRecommendable": true,
+      "priceCents": 397,
+      "id": "21674345",
+      "categories": [
+        {
+          "hasChildren": false,
+          "name": "Beauty",
+          "id": "Beauty"
+        },
+        {
+          "hasChildren": false,
+          "name": "Health",
+          "id": "Health"
+        },
+        {
+          "hasChildren": false,
+          "name": "Bath & Body",
+          "id": "Beauty.Bath & Body"
+        },
+        {
+          "hasChildren": false,
+          "name": "Personal Care",
+          "id": "Health.Personal Care"
+        },
+        {
+          "hasChildren": false,
+          "name": "Body Cleansers",
+          "id": "Beauty.Bath & Body.Body Cleansers"
+        },
+        {
+          "hasChildren": false,
+          "name": "Hand Soap & Sanitizers",
+          "id": "Health.Personal Care.Hand Soap & Sanitizers"
+        }
+      ],
+      "brand": "Generic"
+    },
+    {
+      "clickURL": "http://recs.richrelevance.com/rrserver/apiclick?a=showcaseparent&cak=615389034415e91d&ct=http%3A%2F%2Flabs.richrelevance.com%2Fstorre%2Fcatalog%2Fproduct%2Fview%2Fsku%2F12166620&vg=76aaff05-fc40-4894-edb8-e3536eb328eb&stid=13&pti=11&pa=-1&pos=3&p=12166620&channelId=615389034415e91d&s=2B5F4188-2C10-4B94-9BB5-E881FE28E079&u=RZTestUser",
+      "regionPriceDescription": "",
+      "salePriceRangeCents": [
+        248,
+        248
+      ],
+      "rating": 4.714000225067139,
+      "numReviews": 0,
+      "priceRangeCents": [
+        248,
+        248
+      ],
+      "categoryIds": [
+        "Grocery",
+        "Grocery.Beverages",
+        "Grocery.Beverages.Powdered Drinks & Mixes"
+      ],
+      "salePriceCents": 248,
+      "regionalProductSku": "12166620",
+      "imageURL": "http://labs.richrelevance.com/storre/media/catalog/product/c/r/crystal-light-on-the-go-pink-lemonade-drink-mix-10ct-ff283400f97da02b3b2148f9d50bdcc1.jpg",
+      "name": "Crystal Light On The Go Pink Lemonade Drink Mix, 10ct",
+      "genre": "Grocery",
+      "isRecommendable": true,
+      "priceCents": 248,
+      "id": "12166620",
+      "categories": [
+        {
+          "hasChildren": false,
+          "name": "Grocery",
+          "id": "Grocery"
+        },
+        {
+          "hasChildren": false,
+          "name": "Beverages",
+          "id": "Grocery.Beverages"
+        },
+        {
+          "hasChildren": false,
+          "name": "Powdered Drinks & Mixes",
+          "id": "Grocery.Beverages.Powdered Drinks & Mixes"
+        }
+      ],
+      "brand": "Crystal Light"
+    },
+    {
+      "clickURL": "http://recs.richrelevance.com/rrserver/apiclick?a=showcaseparent&cak=615389034415e91d&ct=http%3A%2F%2Flabs.richrelevance.com%2Fstorre%2Fcatalog%2Fproduct%2Fview%2Fsku%2F17177141&vg=76aaff05-fc40-4894-edb8-e3536eb328eb&stid=13&pti=11&pa=-1&pos=4&p=17177141&channelId=615389034415e91d&s=2B5F4188-2C10-4B94-9BB5-E881FE28E079&u=RZTestUser",
+      "regionPriceDescription": "",
+      "salePriceRangeCents": [
+        1247,
+        1247
+      ],
+      "rating": 4.77400016784668,
+      "numReviews": 0,
+      "priceRangeCents": [
+        1097,
+        1097
+      ],
+      "categoryIds": [
+        "Grocery",
+        "Baby",
+        "Baby.Diapering",
+        "Baby.Diapering & Potty",
+        "Grocery.Infant & Childcare",
+        "Baby.Diapering.Baby Wipes",
+        "Baby.Diapering & Potty.Wipes",
+        "Grocery.Infant & Childcare.Baby Skin Care & Grooming"
+      ],
+      "salePriceCents": 1247,
+      "regionalProductSku": "17177141",
+      "imageURL": "http://labs.richrelevance.com/storre/media/catalog/product/p/a/pampers-sensitive-baby-wipes-448ct-993f0e036eb313f85235fb68dc8148dd.jpg",
+      "name": "Pampers Sensitive Baby Wipes, 448ct",
+      "genre": "Baby",
+      "isRecommendable": true,
+      "priceCents": 1097,
+      "id": "17177141",
+      "categories": [
+        {
+          "hasChildren": false,
+          "name": "Grocery",
+          "id": "Grocery"
+        },
+        {
+          "hasChildren": false,
+          "name": "Baby",
+          "id": "Baby"
+        },
+        {
+          "hasChildren": false,
+          "name": "Diapering",
+          "id": "Baby.Diapering"
+        },
+        {
+          "hasChildren": false,
+          "name": "Diapering & Potty",
+          "id": "Baby.Diapering & Potty"
+        },
+        {
+          "hasChildren": false,
+          "name": "Infant & Childcare",
+          "id": "Grocery.Infant & Childcare"
+        },
+        {
+          "hasChildren": false,
+          "name": "Baby Wipes",
+          "id": "Baby.Diapering.Baby Wipes"
+        },
+        {
+          "hasChildren": false,
+          "name": "Wipes",
+          "id": "Baby.Diapering & Potty.Wipes"
+        },
+        {
+          "hasChildren": false,
+          "name": "Baby Skin Care & Grooming",
+          "id": "Grocery.Infant & Childcare.Baby Skin Care & Grooming"
+        }
+      ],
+      "brand": "Pampers"
+    }
+  ]
+}

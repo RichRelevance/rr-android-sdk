@@ -1,0 +1,8 @@
+
+{
+  "request": {
+    "apiKey": "wrongKey"
+  },
+  "status": "error",
+  "errormessage": "Something went horribly wrong!"
+}

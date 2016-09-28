@@ -1,0 +1,79 @@
+{
+  "requestId": "",
+  "products": [
+    {
+      "regionPriceDescription": "",
+      "salePriceRangeCents": [
+        1247,
+        1247
+      ],
+      "rating": 4.77400016784668,
+      "numReviews": 0,
+      "priceRangeCents": [
+        1097,
+        1097
+      ],
+      "categoryIds": [
+        "Grocery",
+        "Baby",
+        "Baby.Diapering",
+        "Baby.Diapering & Potty",
+        "Grocery.Infant & Childcare",
+        "Baby.Diapering.Baby Wipes",
+        "Baby.Diapering & Potty.Wipes",
+        "Grocery.Infant & Childcare.Baby Skin Care & Grooming"
+      ],
+      "salePriceCents": 1247,
+      "regionalProductSku": "17177141",
+      "imageURL": "http://labs.richrelevance.com/storre/media/catalog/product/p/a/pampers-sensitive-baby-wipes-448ct-993f0e036eb313f85235fb68dc8148dd.jpg",
+      "name": "Pampers Sensitive Baby Wipes, 448ct",
+      "genre": "Baby",
+      "isRecommendable": true,
+      "priceCents": 1097,
+      "id": "17177141",
+      "categories": [
+        {
+          "hasChildren": false,
+          "name": "Grocery",
+          "id": "Grocery"
+        },
+        {
+          "hasChildren": false,
+          "name": "Baby",
+          "id": "Baby"
+        },
+        {
+          "hasChildren": false,
+          "name": "Diapering",
+          "id": "Baby.Diapering"
+        },
+        {
+          "hasChildren": false,
+          "name": "Diapering & Potty",
+          "id": "Baby.Diapering & Potty"
+        },
+        {
+          "hasChildren": false,
+          "name": "Infant & Childcare",
+          "id": "Grocery.Infant & Childcare"
+        },
+        {
+          "hasChildren": false,
+          "name": "Baby Wipes",
+          "id": "Baby.Diapering.Baby Wipes"
+        },
+        {
+          "hasChildren": false,
+          "name": "Wipes",
+          "id": "Baby.Diapering & Potty.Wipes"
+        },
+        {
+          "hasChildren": false,
+          "name": "Baby Skin Care & Grooming",
+          "id": "Grocery.Infant & Childcare.Baby Skin Care & Grooming"
+        }
+      ],
+      "brand": "Pampers"
+    }
+  ]
+}

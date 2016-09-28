@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/Primary.Light.Sub">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_rr"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/rr_logo"/>
+    </RelativeLayout>
+
+    <com.richrelevance.richrelevance.view.CardContainer
+        android:id="@+id/cardLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="95dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ProgressBar.CenteringInset"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/dislike"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/round_button"
+        android:onClick="dislike"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dislike"/>
+
+    <ImageButton
+        android:id="@+id/like"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/round_button"
+        android:onClick="like"
+        android:scaleType="fitCenter"
+        android:src="@drawable/like"/>
+</FrameLayout>

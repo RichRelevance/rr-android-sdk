@@ -1,0 +1,346 @@
+
+{
+  "userId": "RZTestUser",
+  "mostRecentRRUserGuid": "e886b297-8ef4-43bc-2313-52536fc162c6",
+  "timeOfFirstEvent": 1432757395552,
+  "orders": [
+    {
+      "sessionId": "8C9F19A4-7E7D-DC12-1AD6-63BC99DE4633",
+      "timestamp": 1433791582850,
+      "channel": "bccfa17d092268c0",
+      "orderId": "10001",
+      "items": [
+        {
+          "itemId": "10291452",
+          "quantity": 1,
+          "priceInCents": 5999
+        }
+      ]
+    }
+  ],
+  "referrerUrls": [
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150617261,
+      "url": "ref2"
+    },
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150616261,
+      "url": "ref1"
+    }
+  ],
+  "userSegments": [
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791289970,
+      "channel": "WEB",
+      "segments": [
+        "1"
+      ]
+    },
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791244399,
+      "channel": "WEB",
+      "segments": [
+        "1",
+        "TestSeg"
+      ]
+    }
+  ],
+  "userAttributes": [
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791289970,
+      "channel": "WEB",
+      "values": {
+        "Social": [
+          "facebook"
+        ],
+        "Interests": [
+          "Music",
+          "Dancing",
+          "Fashion"
+        ],
+        "Gender": [
+          "M"
+        ]
+      }
+    },
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791244399,
+      "channel": "WEB",
+      "values": {
+        "Social": [
+          "facebook"
+        ],
+        "Interests": [
+          "Music",
+          "Dancing",
+          "Fashion"
+        ],
+        "Gender": [
+          "M"
+        ]
+      }
+    },
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791112212,
+      "channel": "WEB",
+      "values": {
+        "Social": [
+          "facebook"
+        ],
+        "Interests": [
+          "Music",
+          "Dancing",
+          "Fashion"
+        ],
+        "Gender": [
+          "M"
+        ]
+      }
+    },
+    {
+      "sessionId": "9jm3m1kvd84fj4e0ig6itkll20",
+      "timestamp": 1433523443091,
+      "channel": "WEB",
+      "values": {
+        "Social": [
+          "facebook"
+        ],
+        "Interests": [
+          "Music",
+          "Dancing",
+          "Fashion"
+        ],
+        "Gender": [
+          "M"
+        ]
+      }
+    }
+  ],
+  "verbNouns": [
+    {
+      "sessionId": "1425551966279",
+      "timestamp": 1433792082987,
+      "verb": "neutral\u001cstore",
+      "noun": "st1"
+    },
+    {
+      "sessionId": "1425551966279",
+      "timestamp": 1433792081941,
+      "verb": "neutral\u001cstore",
+      "noun": "st1"
+    },
+    {
+      "sessionId": "1425551966279",
+      "timestamp": 1433792080892,
+      "verb": "neutral\u001cstore",
+      "noun": "st1"
+    },
+    {
+      "sessionId": "1425551966279",
+      "timestamp": 1433792072804,
+      "verb": "neutral\u001cstore",
+      "noun": "st1"
+    },
+    {
+      "sessionId": "1425551966279",
+      "timestamp": 1433791783800,
+      "verb": "neutral\u001cstore",
+      "noun": "st1"
+    }
+  ],
+  "countedEvents": [
+    {
+      "value": "e1",
+      "count": 3,
+      "mostRecentTime": 1419150628318
+    },
+    {
+      "value": "e2",
+      "count": 1,
+      "mostRecentTime": 1419150626277
+    }
+  ],
+  "searchedTerms": [
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791289970,
+      "channel": "WEB",
+      "searchTerm": "nuts"
+    },
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791244399,
+      "channel": "WEB",
+      "searchTerm": "nuts"
+    },
+    {
+      "sessionId": "nf5j8oqui4n3fjqsbu2suioaj1",
+      "timestamp": 1433791112212,
+      "channel": "WEB",
+      "searchTerm": "nuts"
+    }
+  ],
+  "addedToCartItems": [
+    {
+      "sessionId": "CA530F66-C543-404B-B5B9-EFCC1A47F010",
+      "timestamp": 1433859621712,
+      "channel": "bccfa17d092268c0",
+      "items": [
+        {
+          "itemId": "la1",
+          "quantity": 4,
+          "priceInCents": 3001
+        },
+        {
+          "itemId": "la2",
+          "quantity": 7,
+          "priceInCents": 4002
+        }
+      ]
+    },
+    {
+      "sessionId": "8373AF7B-FFE4-4001-9A55-AB8AE69B2542",
+      "timestamp": 1433859621636,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "ED41D7A7-96AF-4E4A-AF52-D7D0C2A27441",
+      "timestamp": 1433859221434,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "B535D9E6-B041-47F7-8FCC-1CADB85F8422",
+      "timestamp": 1433859221321,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "0F6456BB-6F35-4EE3-AB25-E9D67CAB72FB",
+      "timestamp": 1433859169495,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "69B1CF2B-E6D1-4B7D-8A72-F03494F71330",
+      "timestamp": 1433859169399,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "SJnzoB9VPFYNMzbSbgYJpElU1_to6S8W2bk=",
+      "timestamp": 1433791946446,
+      "channel": "bccfa17d092268c0",
+      "items": [
+        {
+          "itemId": "10291452",
+          "quantity": -1,
+          "priceInCents": 0
+        }
+      ]
+    },
+    {
+      "sessionId": "8BE1585B-E97A-4F2D-B59E-8450DA0D1E53",
+      "timestamp": 1433776883771,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "0741CCC1-FDD9-48C5-A461-A95AA82D881E",
+      "timestamp": 1433776883694,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "B06339EC-C333-41ED-8300-36DBE0C11967",
+      "timestamp": 1433774809299,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "05BDD67C-938D-48B9-AA4C-1A4F971B2F11",
+      "timestamp": 1433774809187,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "8E391E27-2D70-4CF4-A466-D668CE8510CF",
+      "timestamp": 1433772225765,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "69D0C38E-878E-4362-AFB5-E6CD39798E2E",
+      "timestamp": 1433772225695,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "DCB411B8-FFCB-4BE3-AAEB-224B6B8DB18A",
+      "timestamp": 1433772103251,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    },
+    {
+      "sessionId": "0D684B7F-15B9-4EA6-B1F4-7B21A841257F",
+      "timestamp": 1433772103115,
+      "channel": "bccfa17d092268c0",
+      "items": []
+    }
+  ],
+  "viewedCategories": [
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150609261,
+      "categoryId": "viewCategory2"
+    },
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150608261,
+      "categoryId": "viewCategory1"
+    }
+  ],
+  "viewedBrands": [
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150611261,
+      "brand": "viewBrand2"
+    },
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150610261,
+      "brand": "viewBrand1"
+    }
+  ],
+  "viewedItems": [
+    {
+      "sessionId": "9jm3m1kvd84fj4e0ig6itkll20",
+      "timestamp": 1433523443091,
+      "channel": "WEB",
+      "itemId": "10291452"
+    }
+  ],
+  "clickedItems": [
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150613261,
+      "itemId": "click2"
+    },
+    {
+      "sessionId": "session1",
+      "timestamp": 1419150612261,
+      "itemId": "click1"
+    }
+  ],
+  "batchAttributes": {
+    "someField": "someValue"
+  }
+}

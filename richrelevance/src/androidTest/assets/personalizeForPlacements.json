@@ -1,0 +1,27 @@
+{
+  "request": {
+    "apiKey": "showcaseparent",
+    "clientKey": "615389034415e91d",
+    "placements": [
+      "home_page.omnichannel"
+    ],
+    "sessionId": "null",
+    "userId": "null"
+  },
+  "placements": [
+    {
+      "creatives": [
+        {
+          "IMAGE": "http://thestudyabroadblog.com/wp-content/uploads/2012/02/Top-10-electronics-Study-Abroad.png",
+          "trackingUrl": "http://qa.richrelevance.com/rrserver/emailTracking?a=showcaseparent&vg=12b3ecd4-aeb3-4630-003d-3c53be534219&cpi=NONE&pgt=9&pa=omnichannel&pt=home_page.omnichannel&pcam=766609&pcre=12365",
+          "campaign": "mobile: electronics",
+          "ALERT_TEXT": "Electronics"
+        }
+      ],
+      "html": "",
+      "placement": "home_page.omnichannel"
+    }
+  ],
+  "message": "",
+  "status": "OK"
+}

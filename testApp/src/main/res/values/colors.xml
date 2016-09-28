@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary.Light.Main">#f7f7f7</color>
+    <color name="Primary.Light.Sub">#d7d7d7</color>
+    <color name="Primary.Dark.Main">#454545</color>
+    <color name="Primary.Dark.Sub">#252525</color>
+    <color name="Accent">#990101</color>
+    <color name="Text.Dark">#616161</color>
+    <color name="Text.Light">#aaaaaa</color>
+</resources>
