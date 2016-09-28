@@ -1,5 +1,7 @@
 package com.richrelevance.recommendations;
 
+import android.util.Log;
+
 import com.richrelevance.BaseTestCase;
 import com.richrelevance.Range;
 import com.richrelevance.RequestBuilderAccessor;
@@ -26,21 +28,51 @@ public class PlacementsRecommendationsBuilderTests extends BaseTestCase {
     }
 
     public void testAddPlacement() {
-        Placement placement1 = new Placement(Placement.PlacementType.CART, "horizontal");
-        Placement placement2 = new Placement(Placement.PlacementType.HOME, "vertical");
-        Placement placement3 = new Placement(Placement.PlacementType.HOME, "full");
+        Placement placement1 = new Placement(Placement.PlacementType.HOME, "vertical");
+        Placement placement2 = new Placement(Placement.PlacementType.HOME, "full");
+        Placement placement3 = new Placement(Placement.PlacementType.CART, "horizontal");
+        Placement placement4 = new Placement(Placement.PlacementType.HOME, "hero_full");
 
         PlacementsRecommendationsBuilder builder = new PlacementsRecommendationsBuilder();
         RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
 
         builder.addPlacements(placement1, placement2);
 
+        String expected = "home_page.vertical|home_page.full";
         String placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
-        assertEquals("cart_page.horizontal|home_page.vertical", placementString);
+        assertEquals(expected, placementString);
 
         builder.addPlacements(placement3);
         placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
-        assertEquals("cart_page.horizontal|home_page.vertical|home_page.full", placementString);
+
+        assertEquals(expected, placementString);
+
+        builder.addPlacements(placement1);
+        placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
+        assertEquals(expected, placementString);
+
+        expected = "home_page.vertical|home_page.full|home_page.hero_full";
+        builder.addPlacements(placement4);
+        placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
+        assertEquals(expected, placementString);
+    }
+
+    public void testListeningPlacements() {
+        Placement placement1 = new Placement(Placement.PlacementType.HOME);
+        Placement placement2 = new Placement(Placement.PlacementType.HOME);
+        Placement placement3 = new Placement(Placement.PlacementType.CART);
+
+        PlacementsRecommendationsBuilder builder = new PlacementsRecommendationsBuilder();
+        RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
+
+        String expected = "home_page";
+        builder.addPlacements(placement1);
+        String placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
+        assertEquals(expected, placementString);
+
+        builder.addPlacements(placement2, placement3);
+        placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
+        assertEquals(expected, placementString);
     }
 
     public void testSetPageFeaturedBrand() {

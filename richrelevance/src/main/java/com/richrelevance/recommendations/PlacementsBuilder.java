@@ -1,5 +1,9 @@
 package com.richrelevance.recommendations;
 
+import android.support.annotation.Nullable;
+import android.util.Pair;
+
+import com.richrelevance.RRLog;
 import com.richrelevance.RequestBuilder;
 import com.richrelevance.ResponseInfo;
 import com.richrelevance.utils.Utils;
@@ -8,6 +12,7 @@ import com.richrelevance.utils.ValueMap;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 
 
 public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseInfo, Builder extends PlacementsBuilder> extends RequestBuilder<PlacementsResponseInfo> {
@@ -202,13 +207,96 @@ public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseI
         return (Builder) this;
     }
 
+    /**
+     * Checks that a placement is not already present in the placement request.
+     *
+     * @param placement The placement to check.
+     * @param placementString A pipe-delimited string containing the list of placement already in the placement request.
+     * @return true if the placement is already present, false otherwise.
+     */
+    private boolean placementExists(Placement placement, String placementString) {
+        if (placementString == null || placementString.isEmpty()) {
+            return false;
+        }
+
+        String[] placements = placementString.split("\\|");
+        for (String p : placements) {
+            if (p.equals(placement.getApiValue())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Checks that a placement is not the same type as the current placements being requested.
+     *
+     * @param placement The placement to check.
+     * @param placementString A pipe-delimited string containing the list of placement already in the placement request.
+     * @return true if the placement has a different type, false otherwise.
+     */
+    private boolean placementIsDifferentType(Placement placement, String placementString) {
+        if (placementString == null || placementString.isEmpty()) {
+            return false;
+        }
+
+        String placementName = placement.getApiValue().split("\\.")[0];
+
+        String[] placements = placementString.split("\\|");
+        for (String p : placements) {
+            String[] parts = p.split("\\.");
+            if (parts.length > 0 && !parts[0].equals(placementName)) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+
     private Collection<String> getPlacementStrings(Collection<Placement> placements) {
+        String placementString = getParam(Keys.PLACEMENTS);
+
+        if (placementString == null) {
+            placementString = "";
+        }
+
         if(placements != null) {
             List<String> stringPlacements = new ArrayList<>(placements.size());
 
             for(Placement placement : placements) {
-                if(placement != null) {
-                    stringPlacements.add(placement.getApiValue());
+
+                if(placement == null) {
+                    continue;
+                }
+
+                if (placementExists(placement, placementString)) {
+                    String message = String.format(
+                            Locale.US,
+                            "Invalid placement: '%s' is already in the placement request. " +
+                            "This extra placement request will be ignored.",
+                            placement.getApiValue());
+                    RRLog.e(getClass().getSimpleName(), message);
+                    continue;
+                }
+
+                if (placementIsDifferentType(placement, placementString)) {
+                    String message = String.format(
+                            Locale.US,
+                            "Invalid placement: you are adding a placement of type %s on a request " +
+                            "for another placement type. All placements must be of the same type. " +
+                            "This placement request will be ignored.",
+                            placement.getPageType().toString());
+                    RRLog.e(getClass().getSimpleName(), message);
+                    continue;
+                }
+
+                stringPlacements.add(placement.getApiValue());
+                if (placementString.isEmpty()) {
+                    placementString = placement.getApiValue();
+                } else {
+                    placementString.concat("|" + placement.getApiValue());
                 }
             }
 

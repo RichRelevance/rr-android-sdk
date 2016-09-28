@@ -48,6 +48,7 @@ public class PlacementsRecommendationsBuilder extends PlacementsBuilder<Placemen
         public static final String REGISTRY_ID = "rg";
         public static final String REGISTRY_TYPE_ID = "rgt";
         public static final String ALREADY_ADDED_REGISTRY_ITEMS = "aari";
+        public static final String ADDED_TO_CART_PRODUCT_ID = "atcid";
         public static final String STRATEGY_SET = "strategySet";
 
         public static final String COUNT = "count";
@@ -58,9 +59,7 @@ public class PlacementsRecommendationsBuilder extends PlacementsBuilder<Placemen
 
     private boolean addTimestampEnabled = true;
 
-    public PlacementsRecommendationsBuilder() {
-        excludeHtml(true);
-    }
+    public PlacementsRecommendationsBuilder() { excludeHtml(true); }
 
     /**
      * Sets whether to add a timestamp for cache busting. Highly recommended. If excluded, you may see cached responses. Default is true.
@@ -243,6 +242,17 @@ public class PlacementsRecommendationsBuilder extends PlacementsBuilder<Placemen
      */
     public PlacementsRecommendationsBuilder setReturnMinimalRecommendedItemData(boolean minimal) {
         setParameter(Keys.MINIMAL_RECOMMENDED_ITEM_DATA, minimal);
+        return this;
+    }
+
+    /**
+     * Sets the Product ID of the item being added to the cart.
+     *
+     * @param productId The ID of the product being added to the cart
+     * @return This builder for chaining method calls.
+     */
+    public PlacementsRecommendationsBuilder setAddedToCartProductId(String productId) {
+        setParameter(Keys.ADDED_TO_CART_PRODUCT_ID, productId);
         return this;
     }
 
