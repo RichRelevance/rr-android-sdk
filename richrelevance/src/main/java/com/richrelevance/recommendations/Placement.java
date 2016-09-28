@@ -49,6 +49,12 @@ public class Placement {
             public String getKey() {
                 return "cart_page";
             }
+        },
+        GENERIC {
+            @Override
+            public String getKey() {
+                return "generic_page";
+            }
         };
 
 
@@ -73,6 +79,10 @@ public class Placement {
         this.name = name;
     }
 
+    public Placement(PlacementType pageType) {
+        this.pageType = pageType;
+    }
+
     public Placement(String apiValue) {
         if (!TextUtils.isEmpty(apiValue)) {
             String[] values = apiValue.split("\\.");
@@ -80,10 +90,18 @@ public class Placement {
                 this.pageType = PlacementType.fromKey(values[0]);
                 this.name = values[1];
             }
+
+            if (values.length == 1) {
+                this.pageType = PlacementType.fromKey(values[0]);
+            }
         }
     }
 
     public String getApiValue() {
+        if (this.name == null || TextUtils.isEmpty(name)) {
+            return String.format(Locale.US, "%s", pageType.getKey());
+        }
+
         return String.format(Locale.US, "%s.%s", pageType.getKey(), name);
     }
 

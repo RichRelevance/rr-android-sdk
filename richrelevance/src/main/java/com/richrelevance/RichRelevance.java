@@ -259,11 +259,11 @@ public class RichRelevance {
     /**
      * Creates a builder which tracks a product view.
      *
-     * @param placement The placement.
      * @param productId The ID of the product that was viewed.
      * @return The created builder.
      */
-    public static RequestBuilder<?> buildProductView(Placement placement, String productId) {
+    public static RequestBuilder<?> buildProductView(String productId) {
+        Placement placement = new Placement(Placement.PlacementType.ITEM);
         return new PlacementsRecommendationsBuilder()
                 .addPlacements(placement)
                 .setProductIds(productId);
@@ -272,12 +272,12 @@ public class RichRelevance {
     /**
      * Creates a builder which tracks a purchase.
      *
-     * @param placement The placement.
      * @param orderId   The ID of the order for the purchase.
      * @param products  The products that were purchased.
      * @return The created builder.
      */
-    public static RequestBuilder<?> buildLogPurchase(Placement placement, String orderId, Product... products) {
+    public static RequestBuilder<?> buildLogPurchase(String orderId, Product... products) {
+        Placement placement = new Placement(Placement.PlacementType.PURCHASE_COMPLETE);
         return new PlacementsRecommendationsBuilder()
                 .addPlacements(placement)
                 .setOrderId(orderId)
@@ -287,16 +287,29 @@ public class RichRelevance {
     /**
      * Creates a builder which tracks a purchase.
      *
-     * @param placement The placement.
      * @param orderId   The ID of the order for the purchase.
      * @param products  The products that were purchased.
      * @return The created builder.
      */
-    public static RequestBuilder<?> buildLogPurchase(Placement placement, String orderId, Collection<Product> products) {
+    public static RequestBuilder<?> buildLogPurchase(String orderId, Collection<Product> products) {
+        Placement placement = new Placement(Placement.PlacementType.PURCHASE_COMPLETE);
         return new PlacementsRecommendationsBuilder()
                 .addPlacements(placement)
                 .setOrderId(orderId)
                 .addPurchasedProducts(products);
+    }
+
+    /**
+     * Creates a builder which tracks a category view.
+     *
+     * @param categoryId The ID of the category being viewed
+     * @return The created builder.
+     */
+    public static RequestBuilder<?> buildLogCategoryView(String categoryId) {
+        Placement placement = new Placement(Placement.PlacementType.CATEGORY);
+        return new PlacementsRecommendationsBuilder()
+                .addPlacements(placement)
+                .setCategoryId(categoryId);
     }
 
     /**

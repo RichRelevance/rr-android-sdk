@@ -28,8 +28,8 @@ public class PlacementsPersonalizeBuilderTests extends BaseTestCase {
     }
 
     public void testAddPlacement() {
-        Placement placement1 = new Placement(Placement.PlacementType.CART, "horizontal");
-        Placement placement2 = new Placement(Placement.PlacementType.HOME, "vertical");
+        Placement placement1 = new Placement(Placement.PlacementType.HOME, "vertical");
+        Placement placement2 = new Placement(Placement.PlacementType.CART, "horizontal");
         Placement placement3 = new Placement(Placement.PlacementType.HOME, "full");
 
         PlacementsPersonalizeBuilder builder = new PlacementsPersonalizeBuilder();
@@ -38,11 +38,11 @@ public class PlacementsPersonalizeBuilderTests extends BaseTestCase {
         builder.addPlacements(placement1, placement2);
 
         String placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
-        assertEquals("cart_page.horizontal|home_page.vertical", placementString);
+        assertEquals("home_page.vertical", placementString);
 
         builder.addPlacements(placement3);
         placementString = accessor.getParamValue(PlacementsBuilder.Keys.PLACEMENTS);
-        assertEquals("cart_page.horizontal|home_page.vertical|home_page.full", placementString);
+        assertEquals("home_page.vertical|home_page.full", placementString);
     }
 
     public void testSetPageFeaturedBrand() {
