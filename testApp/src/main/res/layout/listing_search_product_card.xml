@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_size"
+    android:layout_margin="@dimen/margin.quarter"
+    card_view:cardCornerRadius="@dimen/card_radius">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white" >
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_image_size"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin.half"
+            android:paddingRight="@dimen/margin.half"
+            android:paddingTop="@dimen/margin.half"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_medium"
+            android:minLines="2"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="@string/item_name_mockup" />
+
+        <TextView
+            android:id="@+id/product_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin.half"
+            android:paddingRight="@dimen/margin.half"
+            android:paddingTop="@dimen/margin.quarter"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_small"
+            tools:text="@string/brand_name_mockup" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin.half"
+            android:textColor="@color/Accent"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            tools:text="@string/price_name_mockup" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/icn_user"
+        app:showAsAction="ifRoom"
+        android:title="Profile">
+    </item>
+    <item
+        android:id="@+id/miCart"
+        android:icon="@drawable/icn_cart"
+        app:showAsAction="ifRoom"
+        android:title="Shopping cart">
+    </item>
+</menu>

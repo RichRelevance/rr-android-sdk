@@ -206,7 +206,6 @@ public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseI
         setParameter(Keys.EXCLUDE_HTML, exclude);
         return (Builder) this;
     }
-
     /**
      * Checks that a placement is not already present in the placement request.
      *
@@ -267,7 +266,7 @@ public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseI
 
             for(Placement placement : placements) {
 
-                if(placement == null) {
+                if (placement == null) {
                     continue;
                 }
 
@@ -275,7 +274,7 @@ public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseI
                     String message = String.format(
                             Locale.US,
                             "Invalid placement: '%s' is already in the placement request. " +
-                            "This extra placement request will be ignored.",
+                                    "This extra placement request will be ignored.",
                             placement.getApiValue());
                     RRLog.e(getClass().getSimpleName(), message);
                     continue;
@@ -285,8 +284,8 @@ public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseI
                     String message = String.format(
                             Locale.US,
                             "Invalid placement: you are adding a placement of type %s on a request " +
-                            "for another placement type. All placements must be of the same type. " +
-                            "This placement request will be ignored.",
+                                    "for another placement type. All placements must be of the same type. " +
+                                    "This placement request will be ignored.",
                             placement.getPageType().toString());
                     RRLog.e(getClass().getSimpleName(), message);
                     continue;
@@ -299,7 +298,6 @@ public abstract class PlacementsBuilder<PlacementsResponseInfo extends ResponseI
                     placementString.concat("|" + placement.getApiValue());
                 }
             }
-
             return stringPlacements;
         }
 

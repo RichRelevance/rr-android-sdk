@@ -15,7 +15,7 @@ import com.richrelevance.recommendations.PlacementResponse;
 import com.richrelevance.recommendations.PlacementResponseInfo;
 import com.richrelevance.recommendations.PlacementsPersonalizeBuilder;
 import com.richrelevance.recommendations.PlacementsRecommendationsBuilder;
-import com.richrelevance.recommendations.ProductBuilder;
+import com.richrelevance.recommendations.ProductRequestBuilder;
 import com.richrelevance.recommendations.ProductResponseInfo;
 import com.richrelevance.recommendations.RecommendedProduct;
 import com.richrelevance.recommendations.StrategyRecommendationsBuilder;
@@ -46,7 +46,7 @@ public class ApiIntegrationTests extends BaseTestCase {
         super.setUp();
 
         ClientConfiguration config = new ClientConfiguration(Constants.TestApiKeys.API_KEY, Constants.TestApiKeys.API_CLIENT_KEY);
-        config.setEndpoint(Endpoints.PRODUCTION, false);
+        config.setEndpoint(Endpoint.PRODUCTION, false);
         config.setUserId("AndroidTestUser");
         config.setSessionId(UUID.randomUUID().toString());
 
@@ -54,7 +54,7 @@ public class ApiIntegrationTests extends BaseTestCase {
         client.setConfiguration(config);
 
         ClientConfiguration oAuthConfig = new ClientConfiguration(Constants.TestApiKeys.API_KEY, Constants.TestApiKeys.API_CLIENT_KEY);
-        oAuthConfig.setEndpoint(Endpoints.PRODUCTION, true);
+        oAuthConfig.setEndpoint(Endpoint.PRODUCTION, true);
         oAuthConfig.setUserId("RZTestUser");
         oAuthConfig.setSessionId(UUID.randomUUID().toString());
         oAuthConfig.setApiClientSecret(Constants.TestApiKeys.API_CLIENT_SECRET);
@@ -222,7 +222,7 @@ public class ApiIntegrationTests extends BaseTestCase {
     }
 
     public void testProducts() {
-        ProductBuilder builder = RichRelevance.buildProductsRequest("17177141");
+        ProductRequestBuilder builder = RichRelevance.buildProductsRequest("17177141");
         BuilderExecutorHelper<ProductResponseInfo> helper = new BuilderExecutorHelper<>(client, builder);
         helper.execute();
         helper.waitUntilCompleted();

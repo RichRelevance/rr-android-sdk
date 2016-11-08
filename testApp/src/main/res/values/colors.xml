@@ -2,9 +2,10 @@
 <resources>
     <color name="Primary.Light.Main">#f7f7f7</color>
     <color name="Primary.Light.Sub">#d7d7d7</color>
-    <color name="Primary.Dark.Main">#454545</color>
+    <color name="Primary.Dark.Main">#37474f</color>
     <color name="Primary.Dark.Sub">#252525</color>
-    <color name="Accent">#990101</color>
+    <color name="Accent">#2979ff</color>
     <color name="Text.Dark">#616161</color>
     <color name="Text.Light">#aaaaaa</color>
+    <color name="price">#0080FF</color>
 </resources>

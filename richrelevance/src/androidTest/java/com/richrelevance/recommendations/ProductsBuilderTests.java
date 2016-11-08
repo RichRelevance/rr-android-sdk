@@ -44,24 +44,24 @@ public class ProductsBuilderTests extends BaseTestCase {
     }
 
     public void testPath() {
-        RequestBuilder<?> getBuilder = new ProductBuilder();
+        RequestBuilder<?> getBuilder = new ProductRequestBuilder();
         getBuilder.setClient(client);
         RequestBuilderAccessor getAccessor = new RequestBuilderAccessor(getBuilder);
         assertTrue(getAccessor.getUrl().startsWith("https://recs.richrelevance.com/rrserver/api/rrPlatform/getProducts"));
     }
 
     public void testSetProducts() {
-        RequestBuilder<?> builder = new ProductBuilder().setProducts("11111");
+        RequestBuilder<?> builder = new ProductRequestBuilder().setProducts("11111");
         RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
-        assertEquals("11111", accessor.getParamValue(ProductBuilder.Keys.PRODUCTID));
+        assertEquals("11111", accessor.getParamValue(ProductRequestBuilder.Keys.PRODUCTID));
     }
 
     public void testSetCatalogFeedAttributes() {
-        ProductBuilder builder = new ProductBuilder();
+        ProductRequestBuilder builder = new ProductRequestBuilder();
         RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
 
         String[] attributes = new String[] { "A", "B", "3" };
         builder.setCatalogFeedAttributes(attributes);
-        assertEquals(Arrays.asList(attributes), accessor.getAllParamValues(ProductBuilder.Keys.ATTRIBUTES));
+        assertEquals(Arrays.asList(attributes), accessor.getAllParamValues(ProductRequestBuilder.Keys.ATTRIBUTES));
     }
 }

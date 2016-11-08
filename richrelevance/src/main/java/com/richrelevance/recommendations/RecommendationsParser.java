@@ -59,20 +59,20 @@ class RecommendationsParser {
         }
 
         RecommendedProduct product = new RecommendedProduct();
-        product.setId(json.optString("id"));
-        product.setName(json.optString("name"));
-        product.setBrand(json.optString("brand"));
-        product.setGenre(json.optString("genre"));
-        product.setRating(json.optDouble("rating"));
-        product.setNumReviews(json.optLong("numReviews"));
-        product.setRegionalProductSku(json.optString("regionalProductSku"));
-        product.setCategoryIds(JSONHelper.parseStrings(json, "categoryIds"));
-        product.setImageUrl(json.optString("imageURL"));
-        product.setIsRecommendable(json.optBoolean("isRecommendable"));
+        product.setId(json.optString(RecommendedProduct.Keys.ID));
+        product.setName(json.optString(RecommendedProduct.Keys.NAME));
+        product.setBrand(json.optString(RecommendedProduct.Keys.BRAND));
+        product.setGenre(json.optString(RecommendedProduct.Keys.GENRE));
+        product.setRating(json.optDouble(RecommendedProduct.Keys.RATING));
+        product.setNumReviews(json.optLong(RecommendedProduct.Keys.NUM_REVIEWS));
+        product.setRegionalProductSku(json.optString(RecommendedProduct.Keys.REGIONAL_PRODUCTS_SKU));
+        product.setCategoryIds(JSONHelper.parseStrings(json, RecommendedProduct.Keys.CATEGORY_IDS));
+        product.setImageUrl(json.optString(RecommendedProduct.Keys.IMAGE_URL));
+        product.setIsRecommendable(json.optBoolean(RecommendedProduct.Keys.IS_RECCOMENDABLE));
 
-        product.setPriceCents(json.optInt("priceCents"));
-        product.setRegionPriceDescription(json.optString("regionPriceDescription"));
-        JSONArray priceRangeCentsJson = json.optJSONArray("priceRangeCents");
+        product.setPriceCents(json.optInt(RecommendedProduct.Keys.PRICE_CENTS));
+        product.setRegionPriceDescription(json.optString(RecommendedProduct.Keys.REGION_PRICE_DESCRIPTION));
+        JSONArray priceRangeCentsJson = json.optJSONArray(RecommendedProduct.Keys.PRICE_RANGE_CENTS);
         if (priceRangeCentsJson != null && priceRangeCentsJson.length() == 2) {
             try {
                 int min = priceRangeCentsJson.getInt(0);
@@ -83,10 +83,10 @@ class RecommendationsParser {
             }
         }
 
-        product.setClickUrl(json.optString("clickURL"));
+        product.setClickUrl(json.optString(RecommendedProduct.Keys.CLICK_URL));
 
-        product.setAttributes(ParsingUtils.optValueMap(json, "attributes"));
-        product.setCategories(JSONHelper.parseJSONArray(json, "categories", categoryParserDelegate));
+        product.setAttributes(ParsingUtils.optValueMap(json, RecommendedProduct.Keys.ATTRS));
+        product.setCategories(JSONHelper.parseJSONArray(json, RecommendedProduct.Keys.CATEGORIES, categoryParserDelegate));
 
         return product;
     }

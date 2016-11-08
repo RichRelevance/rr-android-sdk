@@ -76,7 +76,7 @@ public class ClientTests extends BaseTestCase {
         PassFailWebManager testManager = new PassFailWebManager();
         WebRequestManager oldManager = flipWebManager(ClickTrackingManager.getInstance(), testManager);
 
-        ClickTrackingManager.getInstance().trackClick(Endpoints.PRODUCTION + "/click");
+        ClickTrackingManager.getInstance().trackClick(Endpoint.PRODUCTION + "/click");
         assertClickTrackingEmpties();
 
         flipWebManager(ClickTrackingManager.getInstance(), oldManager);
@@ -103,7 +103,7 @@ public class ClientTests extends BaseTestCase {
 
         testManager.setFail(true);
 
-        String url = Endpoints.PRODUCTION + "/click";
+        String url = Endpoint.PRODUCTION + "/click";
         ClickTrackingManager.getInstance().trackClick(url);
         ClickTrackingManager.getInstance().trackClick(url);
 

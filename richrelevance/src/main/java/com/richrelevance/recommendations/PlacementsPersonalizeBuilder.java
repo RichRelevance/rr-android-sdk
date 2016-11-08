@@ -26,7 +26,6 @@ public class PlacementsPersonalizeBuilder extends PlacementsBuilder<PlacementPer
         excludeHtml(true);
     }
 
-
     /**
      * Sets custom attribute parameters.
      * Specify this parameter multiple times to request more than one attribute.

@@ -17,7 +17,7 @@
             android:src="@drawable/rr_logo"/>
     </RelativeLayout>
 
-    <com.richrelevance.richrelevance.view.CardContainer
+    <com.richrelevance.richrelevance.PreferencesDemo.view.CardContainer
         android:id="@+id/cardLayoutView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

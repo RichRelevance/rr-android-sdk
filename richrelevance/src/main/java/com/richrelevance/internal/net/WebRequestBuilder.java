@@ -5,6 +5,7 @@ import android.util.Pair;
 import com.richrelevance.internal.net.oauth.OAuthConfig;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -22,6 +23,7 @@ public class WebRequestBuilder {
     private HttpMethod method;
     private List<Pair<String, String>> params;
     private LinkedHashMap<String, String> headers;
+    private List<String> appended;
 
     private OAuthConfig oAuthConfig;
 
@@ -37,6 +39,7 @@ public class WebRequestBuilder {
         this.method = method;
         this.params = new LinkedList<>();
         this.headers = new LinkedHashMap<>();
+        this.appended = new ArrayList<>();
     }
 
     /**
@@ -149,6 +152,13 @@ public class WebRequestBuilder {
     public WebRequestBuilder addParams(Map<String, String> params) {
         for (Entry<String, String> entry : params.entrySet()) {
             addParam(entry.getKey(), entry.getValue());
+        }
+        return this;
+    }
+
+    public WebRequestBuilder addAppend(String append) {
+        if(append != null) {
+            appended.add(append);
         }
         return this;
     }
@@ -276,6 +286,12 @@ public class WebRequestBuilder {
         if (params.size() > 0) {
             String queryString = "?" + HttpUtils.getQueryString(params);
             fullUrl = String.format("%s%s", this.url, queryString);
+        }
+
+        if (appended.size() > 0) {
+            for(String append : appended) {
+                fullUrl += append;
+            }
         }
 
         return fullUrl;

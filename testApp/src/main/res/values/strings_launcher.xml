@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="launcher.title">RichRelevance</string>
+    <string name="launcher.preferences_button">Launch Preferences Demo</string>
+    <string name="launcher.find_button">Launch Find Demo</string>
+    <string name="launcher.apiKeyHint">API Key</string>
+    <string name="launcher.clientKeyHint"> API Client Key</string>
+    <string name="launcher.clientNameHint">Enter Client Name</string>
+    <string name="launcher.userIdEditText">Enter UserId (Optional for Find Demo)</string>
+
+    <string name="chooseUser">Choose User</string>
+    <string name="sortFilter">Sort and Filter</string>
+</resources>
