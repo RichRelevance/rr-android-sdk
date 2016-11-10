@@ -309,8 +309,13 @@ public class SearchActivity extends FindBaseActivity {
                                 }
 
                                 @Override
-                                public void onError(Error error) {
-                                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                                public void onError(final Error error) {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                                        }
+                                    });
                                 }
                             }
 

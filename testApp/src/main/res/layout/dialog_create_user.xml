@@ -5,12 +5,6 @@
     android:layout_margin="@dimen/margin.standard">
 
     <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="Name"/>
-
-    <EditText
         android:id="@+id/userId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

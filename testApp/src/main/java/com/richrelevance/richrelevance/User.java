@@ -8,20 +8,14 @@ import com.orm.SugarRecord;
 
 public class User extends SugarRecord implements Parcelable {
 
-    private String name;
 
     private String userID;
 
     public User() {}
 
-    public User(String name, String userID) {
-        this.name = name;
+    public User(String userID) {
         this.userID = userID;
         save();
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getUserID() {
@@ -29,11 +23,10 @@ public class User extends SugarRecord implements Parcelable {
     }
 
     public User(Parcel in){
-        String[] data = new String[2];
+        String[] data = new String[1];
 
         in.readStringArray(data);
-        this.name = data[0];
-        this.userID = data[1];
+        this.userID = data[0];
     }
 
     @Override
@@ -44,7 +37,6 @@ public class User extends SugarRecord implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeStringArray(new String[] {
-                this.name,
                 this.userID});
     }
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {

@@ -94,7 +94,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         }
 
         public void bind(final User user) {
-            userIdTextView.setText(user.getName() + "(" + user.getUserID() + ")");
+            userIdTextView.setText(user.getUserID());
 
             view.setSelected(user == selectedUser);
             view.setOnClickListener(new View.OnClickListener() {

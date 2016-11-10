@@ -86,10 +86,9 @@ public class UserChooserActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Dialog d = (Dialog) dialog;
-                EditText nameField = (EditText) d.findViewById(R.id.name);
                 EditText userIdField = (EditText) d.findViewById(R.id.userId);
 
-                User user = new User(nameField.getText().toString(), userIdField.getText().toString());
+                User user = new User(userIdField.getText().toString());
                 adapter.addUser(user);
             }
         });

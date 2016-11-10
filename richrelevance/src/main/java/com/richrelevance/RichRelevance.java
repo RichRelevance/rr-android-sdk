@@ -315,7 +315,6 @@ public class RichRelevance {
     /**
      * Creates a builder which tracks a purchase.
      *
-     * @param placement The placement.
      * @param orderId   The ID of the order for the purchase.
      * @param products  The products that were purchased.
      * @return The created builder.
