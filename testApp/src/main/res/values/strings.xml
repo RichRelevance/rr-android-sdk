@@ -4,4 +4,9 @@
     <string name="action_preference">Preference</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_clear">Clear</string>
+
+    <string name="item_name_mockup">Plaid shirt</string>
+    <string name="brand_name_mockup">Guess</string>
+    <string name="price_name_mockup">$15.00</string>
+    <string name="format" formatted="false">$%s.%-2s</string>
 </resources>

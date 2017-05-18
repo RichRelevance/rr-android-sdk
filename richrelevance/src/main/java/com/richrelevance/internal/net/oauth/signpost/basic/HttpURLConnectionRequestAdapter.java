@@ -1,13 +1,13 @@
 package com.richrelevance.internal.net.oauth.signpost.basic;
 
+import com.richrelevance.internal.net.oauth.signpost.http.HttpRequest;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.richrelevance.internal.net.oauth.signpost.http.HttpRequest;
 
 public class HttpURLConnectionRequestAdapter implements HttpRequest {
 

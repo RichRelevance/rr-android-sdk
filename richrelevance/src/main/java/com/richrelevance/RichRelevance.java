@@ -2,13 +2,15 @@ package com.richrelevance;
 
 import android.content.Context;
 
+import com.richrelevance.find.search.SearchRequestBuilder;
+import com.richrelevance.find.autocomplete.AutoCompleteBuilder;
 import com.richrelevance.internal.net.WebRequestManager;
 import com.richrelevance.recommendations.Creative;
 import com.richrelevance.recommendations.Placement;
 import com.richrelevance.recommendations.PlacementsPersonalizeBuilder;
 import com.richrelevance.recommendations.PlacementsRecommendationsBuilder;
 import com.richrelevance.recommendations.Product;
-import com.richrelevance.recommendations.ProductBuilder;
+import com.richrelevance.recommendations.ProductRequestBuilder;
 import com.richrelevance.recommendations.RecommendedProduct;
 import com.richrelevance.recommendations.StrategyRecommendationsBuilder;
 import com.richrelevance.recommendations.StrategyType;
@@ -19,6 +21,7 @@ import com.richrelevance.userProfile.UserProfileBuilder;
 import com.richrelevance.userProfile.UserProfileField;
 
 import java.util.Collection;
+import java.util.Locale;
 
 /**
  * The central launch point for all Rich Relevance SDK activity and configuration.
@@ -29,8 +32,7 @@ public class RichRelevance {
 
     private static RichRelevanceClient defaultClient = newClient();
 
-    private RichRelevance() {
-    }
+    private static SearchRequestBuilder.RCSSearchTokenListener rcsSearchTokenListener = new SearchRequestBuilder.RCSSearchTokenListener();
 
     static WebRequestManager getWebRequestManager() {
         return webRequestManager;
@@ -216,8 +218,8 @@ public class RichRelevance {
      * @param productIds The desired products.
      * @return The created builder.
      */
-    public static ProductBuilder buildProductsRequest(String... productIds) {
-        return new ProductBuilder().setProducts(productIds);
+    public static ProductRequestBuilder buildProductsRequest(String... productIds) {
+        return new ProductRequestBuilder().setProducts(productIds);
     }
 
     /**
@@ -226,8 +228,8 @@ public class RichRelevance {
      * @param productIds The desired products.
      * @return The created builder.
      */
-    public static ProductBuilder buildProductsRequest(Collection<String> productIds) {
-        return new ProductBuilder().setProducts(productIds);
+    public static ProductRequestBuilder buildProductsRequest(Collection<String> productIds) {
+        return new ProductRequestBuilder().setProducts(productIds);
     }
 
     /**
@@ -250,6 +252,47 @@ public class RichRelevance {
     public static UserProfileBuilder buildGetUserProfile(Collection<UserProfileField> fields) {
         return new UserProfileBuilder()
                 .setFields(fields);
+    }
+
+    /**
+     * Creates a builder which requests 'row' number of results for a search term, for each placement
+     * that is provided. This means there are unique row-sized result sets for each placement.
+     * <ul><li>The search locale (from which the response language is extrapolated) defaults to the
+     * locale of the device, but if further configurable through the builder</li><li>The starting
+     * index for results defaults to 0, but is further configurable through the builder</li><li>
+     * The rows defaults to 20, but is further configurable through the builder</li><li>SSL
+     * is enabled by default, but is further configurable through the builder</li>
+     *
+     * @param query     The text to search
+     * @param placement The placement for which to find the search results. Only searches for a single
+     *                  placement are accepted at this time.
+     */
+    public static SearchRequestBuilder buildSearchRequest(String query, Placement placement) {
+        return new SearchRequestBuilder(rcsSearchTokenListener)
+                .setQuery(query)
+                .setRows(20)
+                .setStart(0)
+                .setPlacement(placement)
+                .setChannelId(SearchRequestBuilder.CHANNEL_DEFAULT)
+                .setLanguage(Locale.getDefault());
+    }
+
+    /**
+     * Creates a builder which requests auto-complete query suggestions for a given string.
+     * Pagination start is 0 by default, but can be set for pagincation.
+     * Locale for the language of results is by default the locale of the device, but can be set to another locale.
+     *
+     * @param query      The query to auto-commplete.
+     * @param numResults The number items to include in the result set
+     * @return The created builder.
+     */
+
+    public static AutoCompleteBuilder buildAutoCompleteRequest(String query, int numResults) {
+        return new AutoCompleteBuilder()
+                .setQuery(query)
+                .setNumRows(numResults)
+                .setLocale(Locale.ENGLISH)
+                .setStartIndex(0);
     }
 
     // endregion Fetching
@@ -366,6 +409,4 @@ public class RichRelevance {
     }
 
     // endregion Tracking
-
-
 }

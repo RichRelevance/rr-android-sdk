@@ -3,4 +3,22 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="ProgressBar.CenteringInset">-7dp</dimen>
+
+    <dimen name="margin.quarter">4dp</dimen>
+    <dimen name="margin.half">8dp</dimen>
+    <dimen name="margin.standard">16dp</dimen>
+    <dimen name="margin.large">24dp</dimen>
+    <dimen name="margin.extralarge">48dp</dimen>
+
+    <dimen name="appBar.height">160dp</dimen>
+    <dimen name="card_size">279dp</dimen>
+    <dimen name="card_image_size">172dp</dimen>
+    <dimen name="find.emptyState.card.height">280dp</dimen>
+
+    <dimen name="text_extra_large">24sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+
+    <dimen name="card_radius">5dp</dimen>
 </resources>

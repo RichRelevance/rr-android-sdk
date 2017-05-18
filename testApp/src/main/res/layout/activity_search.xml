@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474f">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="60dp">
+
+                <include layout="@layout/empty_state_search" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="60dp" />
+        </ViewFlipper>
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"
+            app:floatingSearch_leftActionMode="showHome"
+            app:floatingSearch_searchBarMarginLeft="@dimen/margin.quarter"
+            app:floatingSearch_searchBarMarginRight="@dimen/margin.quarter"
+            app:floatingSearch_searchBarMarginTop="@dimen/margin.quarter"
+            app:floatingSearch_searchHint="Search..."
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_suggestionsListAnimDuration="250" />
+
+        <View android:id="@+id/fakeView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/fakeView"
+            android:background="@color/dark_gray"
+            android:padding="@dimen/margin.half"
+            android:text="BACK"
+            android:textAlignment="center"
+            android:onClick="onBackClicked"
+            android:visibility="gone"
+            android:textColor="@color/dark_gray" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@+id/fakeView"
+            android:background="@color/dark_gray"
+            android:padding="@dimen/margin.half"
+            android:text="NEXT"
+            android:textAlignment="center"
+            android:onClick="onNextClicked"
+            android:visibility="gone"
+            android:textColor="@color/Primary.Light.Main" />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSortFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin.standard"
+        android:clickable="true"
+        android:src="@drawable/icn_menu"
+        android:visibility="gone"
+        app:elevation="@dimen/margin.quarter"
+        app:fabSize="normal"
+        app:layout_anchor="@id/recyclerView"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</android.support.design.widget.CoordinatorLayout>

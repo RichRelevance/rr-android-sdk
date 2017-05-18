@@ -1,5 +1,6 @@
 package com.richrelevance.internal.net;
 
+import android.util.Log;
 import android.util.Pair;
 
 import java.io.UnsupportedEncodingException;
@@ -31,7 +32,7 @@ class HttpUtils {
             queryBuilder.append(pair.first);
             queryBuilder.append("=");
             try {
-                queryBuilder.append(URLEncoder.encode(value, "UTF-8"));
+                queryBuilder.append(URLEncoder.encode(value, "UTF-8").replaceAll("\\+", "%20"));
             } catch (UnsupportedEncodingException e) {
                 // Fallback
                 queryBuilder.append(URLEncoder.encode(value));

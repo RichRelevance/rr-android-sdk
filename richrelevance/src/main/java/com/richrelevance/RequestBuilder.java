@@ -375,6 +375,7 @@ public abstract class RequestBuilder<Result extends ResponseInfo> {
                         getConfiguration().getApiClientKey(),
                         getConfiguration().getApiClientSecret()));
             }
+
             return webRequestBuilder;
         }
 

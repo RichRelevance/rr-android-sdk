@@ -10,15 +10,15 @@
  */
 package com.richrelevance.internal.net.oauth.signpost.signature;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.Iterator;
-
 import com.richrelevance.internal.net.oauth.signpost.OAuth;
 import com.richrelevance.internal.net.oauth.signpost.exception.OAuthMessageSignerException;
 import com.richrelevance.internal.net.oauth.signpost.http.HttpParameters;
 import com.richrelevance.internal.net.oauth.signpost.http.HttpRequest;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Iterator;
 
 public class SignatureBaseString {
 

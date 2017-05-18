@@ -52,13 +52,10 @@ public class Placement {
         },
         GENERIC {
             @Override
-            public String getKey() {
-                return "generic_page";
-            }
+            public String getKey() { return "generic_page"; }
         };
 
-
-        public abstract String getKey();
+    public abstract String getKey();
 
         public static PlacementType fromKey(String key) {
             for (PlacementType type : PlacementType.values()) {
@@ -74,13 +71,13 @@ public class Placement {
     private PlacementType pageType;
     private String name;
 
+    public Placement(PlacementType pageType) {
+        this.pageType = pageType;
+    }
+
     public Placement(PlacementType pageType, String name) {
         this.pageType = pageType;
         this.name = name;
-    }
-
-    public Placement(PlacementType pageType) {
-        this.pageType = pageType;
     }
 
     public Placement(String apiValue) {
@@ -90,10 +87,6 @@ public class Placement {
                 this.pageType = PlacementType.fromKey(values[0]);
                 this.name = values[1];
             }
-
-            if (values.length == 1) {
-                this.pageType = PlacementType.fromKey(values[0]);
-            }
         }
     }
 
@@ -101,7 +94,6 @@ public class Placement {
         if (this.name == null || TextUtils.isEmpty(name)) {
             return String.format(Locale.US, "%s", pageType.getKey());
         }
-
         return String.format(Locale.US, "%s.%s", pageType.getKey(), name);
     }
 

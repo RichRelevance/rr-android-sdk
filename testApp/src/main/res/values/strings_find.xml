@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="find.title">Find</string>
+
+    <string name="search.noResults">No Results</string>
+</resources>

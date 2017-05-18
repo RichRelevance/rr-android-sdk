@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 android.libraryVariants.all { variant ->
@@ -50,13 +55,4 @@ android.libraryVariants.all { variant ->
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:support-annotations:23+'
-}
-
-apply from: 'https://raw.githubusercontent.com/Raizlabs/maven-releases/bintrayScriptV2.0/bintray.gradle'
-
-bintray {
-    pkg {
-        licenses = [BINTRAY_PKG_LICENSE]
-        vcsUrl = GIT_URL
-    }
 }

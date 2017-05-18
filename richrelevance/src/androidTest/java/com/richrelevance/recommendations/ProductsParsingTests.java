@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductsParsingTests extends BaseAndroidTestCase {
 
     public void testParseProducts() {
-        ProductBuilder builder = new ProductBuilder();
+        ProductRequestBuilder builder = new ProductRequestBuilder();
         RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
 
         ResponseBuilder responseBuilder = new ResponseBuilder().setResponseCode(200).setContentAssetPath("products.json");
@@ -63,7 +63,7 @@ public class ProductsParsingTests extends BaseAndroidTestCase {
     }
 
     public void testProductsApiError() {
-        ProductBuilder builder = new ProductBuilder();
+        ProductRequestBuilder builder = new ProductRequestBuilder();
         RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
 
         ResponseBuilder responseBuilder = new ResponseBuilder().setResponseCode(200).setContentAssetPath("productsError.json");
@@ -83,7 +83,7 @@ public class ProductsParsingTests extends BaseAndroidTestCase {
     }
 
     public void testProductsBadResponse() {
-        ProductBuilder builder = new ProductBuilder();
+        ProductRequestBuilder builder = new ProductRequestBuilder();
         RequestBuilderAccessor accessor = new RequestBuilderAccessor(builder);
 
         ResponseBuilder responseBuilder = new ResponseBuilder().setResponseCode(200);

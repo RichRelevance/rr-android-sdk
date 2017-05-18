@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin.standard"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/apiKeyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:text="199c81c05e473265"
+        android:hint="@string/launcher.apiKeyHint"/>
+
+    <EditText
+        android:id="@+id/clientKeyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:text="ff7665ca55280538"
+        android:hint="@string/launcher.clientKeyHint"/>
+
+    <EditText
+        android:id="@+id/clientNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:hint="@string/launcher.clientNameHint"/>
+
+    <Button
+        android:id="@+id/preferencesDemoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/launcher.preferences_button" />
+
+    <Button
+        android:id="@+id/findDemoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/launcher.find_button" />
+
+</LinearLayout>

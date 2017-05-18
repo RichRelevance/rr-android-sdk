@@ -59,7 +59,11 @@ public class PlacementsRecommendationsBuilder extends PlacementsBuilder<Placemen
 
     private boolean addTimestampEnabled = true;
 
-    public PlacementsRecommendationsBuilder() { excludeHtml(true); }
+    private String addToCartParams;
+
+    public PlacementsRecommendationsBuilder() {
+        excludeHtml(true);
+    }
 
     /**
      * Sets whether to add a timestamp for cache busting. Highly recommended. If excluded, you may see cached responses. Default is true.
@@ -539,11 +543,20 @@ public class PlacementsRecommendationsBuilder extends PlacementsBuilder<Placemen
         return this;
     }
 
+    public PlacementsRecommendationsBuilder setAddToCartParams(String addToCartParams) {
+        this.addToCartParams = "&" + addToCartParams.replace("query", "searchTerm");
+        return this;
+    }
+
     @Override
     protected void onBuild(WebRequestBuilder builder) {
         super.onBuild(builder);
         if (addTimestampEnabled) {
             builder.setParam(Keys.TIMESTAMP, System.currentTimeMillis());
+        }
+
+        if(addToCartParams != null) {
+            builder.addAppend(addToCartParams);
         }
     }
 

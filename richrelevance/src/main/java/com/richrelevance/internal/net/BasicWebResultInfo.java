@@ -29,6 +29,7 @@ class BasicWebResultInfo<Result> implements WebResultInfo<Result> {
      */
     public BasicWebResultInfo(Result result, Error error, long requestTimestamp, int responseCode, String responseMessage) throws IOException {
         this.result = result;
+        this.error = error;
         this.timestamp = requestTimestamp;
         this.responseCode = responseCode;
         this.responseMessage = responseMessage;

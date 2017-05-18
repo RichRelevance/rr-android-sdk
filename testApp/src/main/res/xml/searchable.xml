@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO properly implement search hint -->
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hint="Search Hint"
+    android:label="@string/app_name"
+    android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"/>
+
+<!--TODO uncomment out the following when implementing autocomplete -->
+    <!--https://androidhub.intel.com/en/posts/nglauber/Android_Search.html-->
+    <!--android:searchSuggestAuthority="ngvl.android.demosearch.citysuggestion"-->
+    <!--android:searchSuggestIntentAction="android.intent.action.VIEW"-->
+    <!--android:searchSuggestIntentData="content://ngvl.android.demosearch.city"/>-->

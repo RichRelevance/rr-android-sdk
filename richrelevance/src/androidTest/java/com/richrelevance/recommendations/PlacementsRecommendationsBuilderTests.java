@@ -1,7 +1,5 @@
 package com.richrelevance.recommendations;
 
-import android.util.Log;
-
 import com.richrelevance.BaseTestCase;
 import com.richrelevance.Range;
 import com.richrelevance.RequestBuilderAccessor;

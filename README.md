@@ -121,6 +121,8 @@ All API requests are constructed using an implementation of the builder pattern.
  * ```StrategyRecommendationsBuilder```: "recsUsingStrategy" builder
  * ```UserPreferenceBuilder```: "user/preferences" read/write builder
  * ```UserProfileBuilder```: "UserProfile" builder
+ * ```SearchRequestBuilder```: Search builder
+ * ```AutoCompleteBuilder```: Autocomplete builder
  
 Each builder has type-safe methods for setting relevant values, the ability to add a completion listener, and an ```execute()``` method which performs the request via the set client (by default this is set to the SDK's default client). There are also helper methods for common use-cases that create pre-configured builders (see next section). Internally, the builders are also responsible for parsing the result of the web request into domain specific objects.
 
