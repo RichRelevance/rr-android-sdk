@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.richrelevance.testApp"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -20,13 +20,12 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:recyclerview-v7:23.3.0'
-    compile 'com.android.support:cardview-v7:23.3.0'
-    compile 'com.android.support:design:23.3.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.arimorty:floatingsearchview:2.0.3'
-    compile 'com.github.satyan:sugar:1.4'
-
-    compile project(':richrelevance')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.arimorty:floatingsearchview:2.0.3'
+    implementation 'com.github.satyan:sugar:1.4'
+    implementation project(':richrelevance')
 }
