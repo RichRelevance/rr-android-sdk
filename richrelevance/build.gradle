@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -29,16 +29,16 @@ android.libraryVariants.all { variant ->
 
         title = "Rich Relevance"
 
-        options.links("http://docs.oracle.com/javase/7/docs/api/");
-        options.linksOffline("http://d.android.com/reference", "${android.sdkDirectory}/docs/reference");
-
-        // First add all of your dependencies to the classpath, then add the android jars
-        classpath += files(variant.javaCompile.classpath.files)
-        classpath += files(android.getBootClasspath())
+        options.links("http://docs.oracle.com/javase/7/docs/api/")
+        options.linksOffline("http://d.android.com/reference", "${android.sdkDirectory}/docs/reference")
 
         // We're excluding these generated files
         exclude '**/BuildConfig.java'
         exclude '**/R.java'
+        doFirst {
+            // First add all of your dependencies to the classpath, then add the android jars
+            classpath = files(variant.javaCompile.classpath.files, android.getBootClasspath())
+        }
     }
 }
 
@@ -49,10 +49,10 @@ android.libraryVariants.all { variant ->
     }
 
     // Add the Javadoc jar to the project's artifacts. This will allow us to upload it easily later
-    project.artifacts.add("archives", tasks["${variant.name}JavadocJar"]);
+    project.artifacts.add("archives", tasks["${variant.name}JavadocJar"])
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-annotations:23+'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-annotations:27.1.1'
 }
